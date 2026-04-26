@@ -1,0 +1,21 @@
+---
+import Button from "../Button.astro";
+import { twMerge } from "tailwind-merge";
+import { Icon } from "astro-icon/components";
+
+const { href, label, icon, class: className } = Astro.props as {
+  href: string;
+  label: string;
+  icon: string;
+  class: string;
+}
+---
+
+<Button
+  class={twMerge(`ml:px-4 gap-2 px-2`, className)}
+  data-href={href}
+  onclick="window.location.href = this.dataset.href"
+>
+    <Icon name={icon} class="text-2xl" />
+    <span class="ml:block hidden text-center">{label}</span>
+</Button>

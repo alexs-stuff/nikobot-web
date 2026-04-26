@@ -1,0 +1,21 @@
+---
+import Button from "../components/ui/Button.astro";
+import NormalLayout from "../layouts/NormalLayout.astro";
+---
+
+<NormalLayout class="flex flex-col items-center justify-center gap-8">
+    <div class="flex flex-col">
+        <h1 class="w-full text-center text-6xl font-bold">404</h1>
+        <span class="w-full text-center text-3xl font-semibold">Page not found</span>
+    </div>
+    <div class="flex flex-col w-full max-w-96 gap-2">
+    <Button data-href="/" class="h-12.5 w-full"   onclick="window.location.href = this.dataset.href">
+        <span class="text-center text-xl font-semibold">Go Back</span>
+    </Button>
+    <Button  class="h-12.5"   onclick="history.back()">
+        <span class="text-center text-xl font-semibold">Return Home</span>
+    </Button>
+    </div>
+
+
+</NormalLayout>

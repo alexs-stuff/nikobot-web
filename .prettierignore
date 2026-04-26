@@ -1,0 +1,10 @@
+node_modules/*
+dist/*
+assets/*
+.astro/*
+
+bun.lock
+.gitignore
+.eslintignore
+.env.example
+LICENSE

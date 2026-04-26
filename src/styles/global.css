@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-smooth: never;
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
+@theme {
+    --color-primary-bg: #1d042c;
+
+    --color-primary-bg-hover: color-mix(
+        in oklab,
+        var(--color-primary-bg),
+        #fff 10%
+    );
+    --color-primary-border: color-mix(
+        in oklab,
+        var(--color-primary-bg),
+        #fff 10%
+    );
+
+    --color-primary-fg: #fff;
+
+    --color-secondary-bg: color-mix(
+        in oklab,
+        var(--color-primary-bg),
+        #000 20%
+    );
+    --color-secondary-border: color-mix(
+        in oklab,
+        var(--color-secondary-bg),
+        #fff 7.5%
+    );
+}
+
+@theme {
+    --breakpoint-xsss: 22.5rem;
+    --breakpoint-xss: 25rem;
+    --breakpoint-xs: 30rem;
+    --breakpoint-xls: 35rem;
+    --breakpoint-sl: 42.5rem;
+    --breakpoint-ml: 50rem;
+}
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+    --font-terminus: "Terminus", sans-serif;
+}
+
+img.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 0.05em 0 0.1em;
+    vertical-align: -0.1em;
+    display: inline;
+}
+
+button {
+  cursor: pointer;
+}

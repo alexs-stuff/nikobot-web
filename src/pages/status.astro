@@ -1,0 +1,20 @@
+---
+import NormalLayout from "../layouts/NormalLayout.astro";
+---
+
+<NormalLayout class="flex flex-col justify-start items-center">
+    <div class="w-full max-w-[70%] px-8 py-8 pt-16 flex flex-col justify-start items-center">
+        <div class="w-full">
+            <h1 class="w-full text-4xl font-bold">Bot Status</h1>
+            <span class="w-full text-xl">The page automatically refreshes every 30s</span>
+        </div>
+        
+
+    </div>
+    <script>
+        await setTimeout(() => {
+            window.location.reload()
+        }, 30 * 1000);
+
+    </script>
+</NormalLayout>

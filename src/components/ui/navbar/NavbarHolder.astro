@@ -1,0 +1,38 @@
+---
+import Button from "../Button.astro";
+import { Icon } from "astro-icon/components";
+import NavbarButton from "./NavbarButton.astro";
+---
+
+<nav
+    class="fixed top-0 z-20 flex h-14 w-full items-center justify-center text-white">
+    <div
+        class="bg-secondary-bg/90 border-b-secondary-border flex h-full w-full flex-row items-center gap-2 border-b  backdrop-blur-2xl">
+        <div class="flex-1 xs:flex-none transition-[flex-grow] duration-300"></div>
+
+        <div class="flex w-auto flex-row items-center justify-center gap-2">
+            <a
+                href="/"
+                class="hover:bg-primary-bg-hover/50 flex w-auto flex-row items-center justify-center gap-2 rounded-lg px-2 py-1 transition-colors duration-300">
+                <img src="/niko_favicon.png" width={36} height={36} />
+                <h1 class="text-[18px] font-semibold hidden xsss:block">NikoBot</h1>
+            </a>
+            <NavbarButton icon="fa7-solid:bars" label="Menu" class="xs:hidden" />
+            <div class="max-w-auto xs:flex hidden flex-row items-center justify-center gap-2">
+                <NavbarButton href="/" icon="fa7-solid:home" label="Home" />
+                <NavbarButton href="/cmds/" icon="fa7-solid:terminal" label="Commands" />
+                <NavbarButton href="/status/" icon="fa7-solid:heartbeat" label="Status" />
+                <NavbarButton href="/donate/" icon="fa7-solid:gift" label="Donate" />
+            </div>
+        </div>
+
+        <div class="flex-none xs:flex-1 transition-[flex-grow] duration-300"></div>
+
+        <Button class="gap-2 px-4">
+            <Icon name="fa7-brands:discord" class="text-xl" />
+            <span>Login</span>
+        </Button>
+
+        <div class="flex-1 xs:flex-none transition-[flex-grow] duration-300"></div>
+    </div>
+</nav>
