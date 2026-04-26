@@ -3,7 +3,7 @@ import { ClientRouter } from "astro:transitions";
 import NavbarHolder from "../components/ui/navbar/NavbarHolder.astro";
 import "../styles/global.css";
 
-const {class: className} = Astro.props as {class: string}
+const { class: className } = Astro.props as { class: string };
 import { twMerge } from "tailwind-merge";
 ---
 
@@ -42,7 +42,8 @@ import { twMerge } from "tailwind-merge";
         class="font-inter h-auto min-h-dvh w-full overflow-x-hidden bg-black to-40%">
         {/*  bg-radial-[at_50%_0%] from-primary-bg from-0% to-[#14031d] */}
         <NavbarHolder />
-        <main class={`${twMerge("min-h-dvh w-full overflow-x-hidden pt-16 text-white", className)}`}>
+        <main
+            class={`${twMerge("min-h-dvh w-full overflow-x-hidden pt-16 text-white", className)}`}>
             <slot />
         </main>
 

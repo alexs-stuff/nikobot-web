@@ -9,7 +9,7 @@
     "scripts": {
         "dev": "astro dev",
         "build": "astro build",
-        "preview": "astro preview",
+        "build:docker": "docker build . -t alexs-stuff/nikobot-web",
         "astro": "astro",
         "lint": "bunx eslint",
         "format": "bunx prettier * --write"
@@ -27,6 +27,7 @@
         "eslint-plugin-astro": "^1.7.0",
         "prettier": "^3.8.3",
         "prettier-plugin-astro": "^0.14.1",
+        "prettier-plugin-sh": "^0.18.1",
         "prettier-plugin-tailwindcss": "^0.7.3",
         "tailwind-merge": "^3.5.0",
         "tailwindcss": "^4.2.4"
