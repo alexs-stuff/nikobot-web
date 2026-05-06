@@ -1,7 +1,6 @@
 ---
-import Button from "../Button.astro";
-import { Icon } from "astro-icon/components";
 import NavbarButton from "./NavbarButton.astro";
+import NavbarUser from "../user/NavbarUser";
 ---
 
 <nav
@@ -16,14 +15,12 @@ import NavbarButton from "./NavbarButton.astro";
                 href="/"
                 class="hover:bg-primary-bg-hover/50 flex w-auto flex-row items-center justify-center gap-2 rounded-lg px-2 py-1 transition-colors duration-300">
                 <img src="/niko_favicon.png" width={36} height={36} />
-                <h1 class="xsss:block hidden text-[18px] font-semibold">
-                    NikoBot
-                </h1>
+                <h1 class="text-[18px] font-semibold">NikoBot</h1>
             </a>
             <NavbarButton
                 icon="fa7-solid:bars"
                 label="Menu"
-                class="xs:hidden"
+                class="xs:hidden order-1"
             />
             <div
                 class="max-w-auto xs:flex hidden flex-row items-center justify-center gap-2">
@@ -49,10 +46,7 @@ import NavbarButton from "./NavbarButton.astro";
         <div class="xs:flex-1 flex-none transition-[flex-grow] duration-300">
         </div>
 
-        <Button class="gap-2 px-4">
-            <Icon name="fa7-brands:discord" class="text-xl" />
-            <span>Login</span>
-        </Button>
+        <NavbarUser client:load/>
 
         <div class="xs:flex-none flex-1 transition-[flex-grow] duration-300">
         </div>

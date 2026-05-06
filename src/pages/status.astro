@@ -3,14 +3,19 @@ import NormalLayout from "../layouts/NormalLayout.astro";
 ---
 
 <NormalLayout class="flex flex-col items-center justify-start">
-    <div
-        class="flex w-full max-w-[70%] flex-col items-center justify-start px-8 py-8 pt-16">
-        <div class="w-full">
-            <h1 class="w-full text-4xl font-bold">Bot Status</h1>
-            <span class="w-full text-xl"
-                >The page automatically refreshes every 30s</span
-            >
-        </div>
+    <div class="flex h-auto w-full flex-col">
+        <h1 class="w-full text-4xl font-bold">Bot Status</h1>
+        <span class="w-full text-xl"
+            >The page automatically refreshes every 30s</span
+        >
+        <span class="w-full text-sm text-gray-500"
+            >NOTE: THIS IS CURRENTLY AN IFRAME POINTED TO A GRAFANA INSTANCE</span
+        >
+        <iframe
+            src="https://grafana-public.alex427.com/public-dashboards/ed2de0f3b83441e48bac0df6d95e5493"
+            width="100%"
+            height="350"
+            loading="lazy"></iframe>
     </div>
     <script>
         await setTimeout(() => {
